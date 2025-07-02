@@ -1,0 +1,6 @@
+venv/
+
+.tar.gz
+.txt
+.log
+.db
