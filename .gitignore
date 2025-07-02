@@ -1,6 +1,9 @@
 venv/
+out/
+music/
 
-.tar.gz
-.txt
-.log
-.db
+*.tar.gz
+*.txt
+*.log
+*.db
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -z "$1" ] ; then
+	echo 'Usage: ./pack <band_name>'
+fi
+
+tar cvf - music/* | gzip -9 > "$1.tar.gz"
+

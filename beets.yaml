@@ -1,0 +1,35 @@
+directory: ~/music/music
+library: ~/music/beets.db
+
+plugins: lyrics info spotify lastgenre extrafiles substitute rewrite
+
+import:
+  write: yes
+  move: yes
+  group_albums: yes
+  none_rec_action: asis
+
+paths:
+  default: %first{$albumartist,1,0,$,}/$album/$title
+  comp: %first{$albumartist,1,0,$,}/$album/$title
+
+extrafiles:
+  patterns:
+    lyrics: '*.lrc'
+
+lastgenre:
+  count: 5
+  force: no
+
+lyrics:
+  synced: yes
+
+match:
+  strong_rec_thresh: 0.4
+
+spotify:
+  source_weight: 0.9
+
+musicbrainz:
+  enabled: no
+

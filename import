@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. venv/bin/activate
+
+beet -c beets.yaml import -ql import.log --quiet-fallback asis out/$1
+# beet -c beets.yaml spotifysync
+
+# beet -c beets.yaml modify --nomove -y 'title::.*' artists='$artist' albumartists='$albumartist'
+# beet -c beets.yaml modify --nomove -y 'title::.*' artist='%first{$artist,1,0,$,}' albumartist='%first{$albumartist,1,0,$,}'
+
+find out -type d -exec rmdir --parents {} \; 2>/dev/null
+
