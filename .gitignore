@@ -1,5 +1,6 @@
 out/
 music/
+__pycache__/
 
 *.tar.gz
 *.txt
