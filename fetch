@@ -12,5 +12,4 @@ echo "Output folder: $OUT"
 pip install -U yt-dlp
 yt-dlp --cookies-from-browser chrome:/home/user/snap/chromium/common/chromium/Default/ --cookies ../../cookies.txt 2>/dev/null
 
-spotdl --format mp3 --output '{album-artist}/{album}/{title}.{output-ext}' --generate-lrc --yt-dlp-args 'extractor-args "youtube:player-client=all;po_token=mweb.gvs+MnB-S8iCkNhid35zAoOHMr9aaJaFt-oFBaYLfBdX52H2Qcwj9jRIOyby7kEuPKuF79HMt05iWRO9yW5Wp40ypZz-fWRDpo1kvHdRWHa3hDBcryETZo2Tin_edKWosH-MXWoyX-BIrZEggeuStT7X9tcj" --cookies ../../cookies.txt -x --audio-format mp3' --max-retries 5 --threads 6 --preload --save-errors ../../errors.log --id3-separator ', ' --log-level=DEBUG download $* --audio youtube-music youtube soundcloud --lyrics genius musixmatch synced
-
+spotdl --format mp3 --output '{album-artist}/{album}/{title}.{output-ext}' --yt-dlp-args '-f mp3,m4a,webm --cookies ../../cookies.txt' --max-retries 5 --threads 6 --preload --save-errors ../../errors.log --id3-separator ', ' --log-level=DEBUG download $* --audio youtube-music youtube soundcloud --generate-lrc --lyrics genius synced --genius-access-token 'V1cJYvWbhzkZ8saefsEwi_ZVI1ZmPUjnNRb3XTvtgTN9YLEYNm5IuFrPqYbebjQQ'

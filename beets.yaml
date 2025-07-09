@@ -18,11 +18,15 @@ extrafiles:
     lyrics: '*.lrc'
 
 lastgenre:
-  count: 5
-  force: no
+  count: 3
+  source: track
+  force: yes
+  keep_existing: no
 
 lyrics:
+  auto: yes
   synced: yes
+  force: no
 
 match:
   strong_rec_thresh: 0.4
